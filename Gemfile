@@ -10,7 +10,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'high_voltage'
 gem 'therubyracer', :platform=>:ruby
-
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
@@ -34,3 +33,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
 end
+group :production do
+  gem 'pg'
+end
+
