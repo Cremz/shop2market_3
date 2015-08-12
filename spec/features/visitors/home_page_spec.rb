@@ -13,4 +13,16 @@ feature 'Home page' do
     expect(page).to have_content 'Welcome'
   end
 
+  scenario 'visit the home page and convert from Fahrenheit' do
+    visit root_path
+    fill_in 'fahrenheit', with: '100'
+    click_button 'convert_fahrenheit'
+    expect(page).to have_content '100°F equals 37.78°C'
+  end
+  scenario 'visit the home page and convert from Celsius' do
+    visit root_path
+    fill_in 'celsius', with: '100'
+    click_button 'convert_celsius'
+    expect(page).to have_content '100°C equals 212.0°F'
+  end
 end

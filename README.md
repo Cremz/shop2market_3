@@ -1,48 +1,26 @@
 Shop2market 3
 ================
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
+To setup this project I used Rails Composer. It is a great tool that let's coders be productive and have a great starting point.
 
-Rails Composer is open source and supported by subscribers. Please join RailsApps to support development of Rails Composer.
+About the code
+--------------
 
-Problems? Issues?
------------
+Because I used Rails composer, I was able to have a nice structure for the app, with a properly setup testing environment and the UI framework set to bootstrap.
 
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
+I dedided to stick to using only one controller and two routes for the app. The homepage shows the converter and uses params via a GET call to make the conversions. I've also added a secondary page with the requirements of the task.
 
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
+I created a Converter model that has a couple of class methods, they make the calculations between the two temperatures.
 
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
-
-Ruby on Rails
--------------
-
-This application requires:
-
-- Ruby 2.1.0
-- Rails 4.2.3
-
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
-
-Getting Started
----------------
-
-Documentation and Support
--------------------------
-
-Issues
--------------
-
-Similar Projects
-----------------
-
-Contributing
-------------
-
-Credits
+Testing
 -------
 
-License
--------
+Even if the app is small, I wanted to make sure that it is tested and all lines are covered. I added simplecov gem to measure the coverage and ran a couple of sample tests.
+
+Things to add
+-------------
+
+While writing this code I was thinking I could also add these conversions in a db and even allow users to create their own conversions by typing in a formula.
+
+The layout of the site allows for either multiple converters per page or a simple navigation between differenr groups.
+

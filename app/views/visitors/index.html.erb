@@ -11,10 +11,10 @@
             <%= form_tag '/', method: :get, class: "form-inline" do %>
                 <div class="form-group">
                     <div class="input-group">
-                        <%= text_field_tag 'fahrenheit', params[:fahrenheit], placeholder: '0', class: "form-control" %>
+                        <%= text_field_tag 'fahrenheit', @fahrenheit, placeholder: '0', class: "form-control" %>
                         <div class="input-group-addon">°F</div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Convert</button>
+                    <button type="submit" class="btn btn-primary" id='convert_fahrenheit'>Convert</button>
                 </div>
             <% end %>
         </div>
@@ -22,11 +22,21 @@
             <%= form_tag '/', method: :get, class: "form-inline" do %>
                 <div class="form-group">
                     <div class="input-group">
-                        <%= text_field_tag 'celsius', params[:celsius], placeholder: '0', class: "form-control" %>
+                        <%= text_field_tag 'celsius', @celsius, placeholder: '0', class: "form-control" %>
                         <div class="input-group-addon">°C</div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Convert</button>
+                    <button type="submit" class="btn btn-primary" id='convert_celsius'>Convert</button>
                 </div>
+            <% end %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <% if params[:fahrenheit] %>
+                <%= @fahrenheit %>°F equals <%= @celsius %>°C
+            <% end %>
+            <% if params[:celsius] %>
+                <%= @celsius %>°C equals <%= @fahrenheit %>°F
             <% end %>
         </div>
     </div>
